@@ -3,14 +3,22 @@
 <div class="cards">
   <% @lists.each do |list| %>
     <% unless list.photo.key.nil? %>
-      <div href="/list/<% list.id %>" class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path list.photo.key, height: 300, crop: :fill %>)">
-        <%= link_to list.name, list_path(list) %>
-      </div>
+
+      <%= link_to list_path(list)  do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path list.photo.key, height: 300, crop: :fill %>)">
+            <%= list.name %>
+        </div>
+      <% end %>
+
     <% else %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://townsquare.media/site/442/files/2015/04/best-superhero-movies-all-time-pic.jpg?w=1200&h=0&zc=1&s=0&a=t&q=89')">
-        <%= link_to list.name, list_path(list) %>
-      </div>
+
+      <%= link_to list_path(list)  do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://townsquare.media/site/442/files/2015/04/best-superhero-movies-all-time-pic.jpg?w=1200&h=0&zc=1&s=0&a=t&q=89')">
+          <%= list.name %>
+        </div>
+      <% end %>
     <% end %>
   <% end %>
 </div>
+
 <%= link_to "New List", new_list_path%>
