@@ -3,11 +3,18 @@ class BookmarksController < ApplicationController
     # @list =  '/lists/:list_id/bookmarks/new'
     @bookmark = Bookmark.new
     @list = List.find(params[:list_id])
-    @movies = Movie.all
   end
 
   def create
     @list = List.find(params[:list_id])
+    # @movie = bookmark_param[:movie]
+    # # @comment = bookmark_param[:comment]
+    # @bookmark = Bookmark.new(bookmark_param)
+    # @bookmark.list = @List
+    # @bookmark.save
+
+    # comment: @comment, movie_id: @movie, list_id: @list
+
     @bookmark = Bookmark.new
 
     @params = bookmark_param
