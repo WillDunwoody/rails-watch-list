@@ -1,0 +1,37 @@
+.sidebar-container {
+  width: 15vw;
+  height: 92vh;
+  margin-right: 20px;
+  margin-top: 7vh;
+  position: fixed;
+}
+
+.main-sidebar {
+  padding-top: 5vh;
+  width: 15vw;
+  height: 92vh;
+  background: #191C1F;
+}
+
+.list-item {
+  width: 100%;
+  color: #666D73;
+  font-weight: bold;
+  background-color: #191C1F;
+  height: 7vh;
+
+  p {
+    margin-top: 1vh;
+    width: 100%;
+    padding: 1.5vh;
+  }
+
+  p:hover {
+    background-color: #222B31;
+    color: #F83745;
+  }
+}
+
+.bottom-border {
+  border-bottom: 2px solid #666D73;
+}

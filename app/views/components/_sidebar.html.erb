@@ -1,0 +1,17 @@
+<div class="sidebar-container">
+  <div class="main-sidebar">
+    <%= link_to new_list_path, style:"text-decoration: none;" do %>
+      <div class="list-item bottom-border">
+        <p>Add List</p>
+      </div>
+    <% end %>
+
+    <%= lists.each do |li| %>
+      <%= link_to list_path(li.id), style:"text-decoration: none;" do %>
+        <div class="list-item">
+          <p><%= li.name %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

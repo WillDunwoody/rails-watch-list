@@ -16,6 +16,7 @@ class BookmarksController < ApplicationController
     @bookmark.save
 
     redirect_to list_path(@list)
+    raise
   end
 
   private

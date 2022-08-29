@@ -3,5 +3,4 @@ Rails.application.routes.draw do
   resources :lists, only: [:index, :show, :new, :create] do
     resource :bookmarks, only: [:new, :create]
   end
-
 end

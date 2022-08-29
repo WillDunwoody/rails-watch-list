@@ -1,6 +1,11 @@
 class ListsController < ApplicationController
   def index
     @lists = List.all
+    @search = params["search"]
+    if @search.present?
+      @name = @search["name"]
+      @lists = List.where(name: @name)
+    end
   end
 
   def show
