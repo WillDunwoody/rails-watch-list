@@ -6,7 +6,7 @@
       </div>
     <% end %>
 
-    <%= lists.each do |li| %>
+    <% lists.each do |li| %>
       <%= link_to list_path(li.id), style:"text-decoration: none;" do %>
         <div class="list-item">
           <p><%= li.name %></p>
