@@ -22,3 +22,16 @@
     color: white;
   }
 }
+
+.new-list-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  a {
+    color: white;
+    background-color: #FF424F;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
