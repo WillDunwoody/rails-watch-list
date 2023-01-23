@@ -1,11 +1,11 @@
 databases:
-  - name: rails-watch-list
-    databaseName: rails-watch-list
-    user: rails-watch-list
+  - name: mysite
+    databaseName: mysite
+    user: mysite
 
 services:
   - type: web
-    name: rails-watch-list
+    name: mysite
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
